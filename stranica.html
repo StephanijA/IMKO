@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMKO</title>
+    <link rel="stylesheet" href="stranica.css">
+
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>IMKO</h1>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="hero">
+    <div class="container">
+        <h2>Welcome to IMKO!</h2>
+        <p>High-quality tiles for every space</p>
+    </div>
+</section>
+
+<section id="categories" class="categories">
+    <h2>Our Creations</h2>
+    <div class="image-container">
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.29_13e685f9.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.29_dd5a05e3.jpg" >
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.29_ef35baf1.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.30_5ba4368b.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.30_9b317fcc.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.30_9394a4c8.jpg">
+        </div>
+
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.30_ce32c8ff.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_2c0e1c73.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_88d8d093.jpg">
+        </div>
+
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_300aa6f8.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_af292a17.jpg">
+        </div>
+        <div class="category-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_d4641cad.jpg">
+        </div>
+    </div>
+</section>
+
+<section id="products" class="products">
+    <div class="container">
+        <h2>POPULAR WORKS</h2>
+        <div class="product-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_300aa6f8.jpg" >
+        </div>
+        <div class="product-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_af292a17.jpg">
+        </div>
+        <div class="product-item">
+            <img src="sliki/WhatsApp Image 2025-03-18 at 09.09.31_d4641cad.jpg" >
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>For any inquiries, feel free to reach out:</p>
+        <p>Email: adnanrijada16@gmail.com</p>
+        <p>Телефон: +1 734 383 3002</p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>© 2024 IMKO. All rights reserved.</p>
+    </div>
+</footer>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let modal = document.getElementById("imageModal");
+        let modalImg = document.getElementById("modalImage");
+        let closeBtn = document.querySelector(".close");
+
+        document.querySelectorAll(".category-item img").forEach(img => {
+            img.onclick = function () {
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            };
+        });
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        modal.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+    });
+</script>
+
+
+
+</body>
+</html>
